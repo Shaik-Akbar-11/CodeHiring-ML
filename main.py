@@ -11,41 +11,30 @@ MAX_ATTEMPTS = 5
 QUESTIONS_PER_TOPIC = 3
 
 
-def main():
+def generate_section(
+    section_name,
+    topics,
+    builder,
+    generator,
+    validator,
+    exporter,
+):
 
-    print("\n========== CODEHIRING AI DATASET ENGINE ==========\n")
-
-    # Load Company Knowledge
-    loader = CompanyLoader("knowledge/Amazon")
-    data = loader.load_all()
-
-    print("✅ Company Loaded Successfully\n")
-
-    # Initialize Modules
-    builder = PromptBuilder(
-        data["profile"],
-        data["pattern"]
-    )
-
-    generator = Generator()
-    validator = Validator()
-    exporter = Exporter()
-
-    # Load aptitude topics
-    topics = data["aptitude"]
+    print("\n" + "=" * 100)
+    print(f"SECTION : {section_name}")
+    print("=" * 100)
 
     total_saved = 0
 
-    # Loop through each topic
     for _, row in topics.iterrows():
 
         topic = row["topic"]
         difficulty = row["difficulty"]
 
-        print("\n" + "=" * 80)
+        print("\n" + "-" * 80)
         print(f"TOPIC : {topic}")
         print(f"DIFFICULTY : {difficulty}")
-        print("=" * 80)
+        print("-" * 80)
 
         saved = 0
 
@@ -61,6 +50,7 @@ def main():
                 print(f"Attempt : {attempt}")
 
                 prompt = builder.build_prompt(
+                    section=section_name,
                     topic=topic,
                     difficulty=difficulty
                 )
@@ -71,8 +61,8 @@ def main():
 
                     clean_response = (
                         response.replace("```json", "")
-                                .replace("```", "")
-                                .strip()
+                        .replace("```", "")
+                        .strip()
                     )
 
                     question = json.loads(clean_response)
@@ -85,7 +75,6 @@ def main():
                     attempt += 1
                     continue
 
-                # Python Validation
                 valid, errors = validator.validate(question)
 
                 print("\n========== VALIDATION ==========")
@@ -105,20 +94,71 @@ def main():
                     saved += 1
                     total_saved += 1
 
-                    print(f"\n✅ Saved ({saved}/{QUESTIONS_PER_TOPIC})")
+                    print(f"✅ Saved ({saved}/{QUESTIONS_PER_TOPIC})")
 
                 else:
 
-                    print("\n❌ Rejected")
+                    print("❌ Rejected")
 
                 attempt += 1
 
             if not accepted:
-                print(f"\n⚠ Skipping {topic} after {MAX_ATTEMPTS} failed attempts.")
+
+                print(f"⚠ Skipping {topic}")
+
+    return total_saved
+
+
+def main():
+
+    print("\n========== CODEHIRING AI DATASET ENGINE ==========\n")
+
+    loader = CompanyLoader("knowledge/Amazon")
+    data = loader.load_all()
+
+    print("✅ Company Loaded Successfully\n")
+
+    builder = PromptBuilder(
+        data["profile"],
+        data["pattern"]
+    )
+
+    generator = Generator()
+    validator = Validator()
+    exporter = Exporter()
+
+    grand_total = 0
+
+    grand_total += generate_section(
+        "Quantitative Aptitude",
+        data["aptitude"],
+        builder,
+        generator,
+        validator,
+        exporter
+    )
+
+    grand_total += generate_section(
+        "Logical Reasoning",
+        data["logical"],
+        builder,
+        generator,
+        validator,
+        exporter
+    )
+
+    grand_total += generate_section(
+        "Verbal Ability",
+        data["verbal"],
+        builder,
+        generator,
+        validator,
+        exporter
+    )
 
     print("\n========================================")
     print("DATASET GENERATION COMPLETED")
-    print(f"TOTAL QUESTIONS SAVED : {total_saved}")
+    print(f"TOTAL QUESTIONS : {grand_total}")
     print("========================================")
 
 

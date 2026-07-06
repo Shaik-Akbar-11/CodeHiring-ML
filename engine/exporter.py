@@ -6,51 +6,62 @@ class Exporter:
 
     def __init__(self):
 
-        self.output_dir = "output/Amazon"
+        self.output_root = "output/Amazon"
 
-        os.makedirs(self.output_dir, exist_ok=True)
-
-        self.file = os.path.join(
-            self.output_dir,
-            "aptitude.csv"
+        os.makedirs(
+            self.output_root,
+            exist_ok=True
         )
 
-        if not os.path.exists(self.file):
-
-            with open(
-                self.file,
-                "w",
-                newline="",
-                encoding="utf-8"
-            ) as csvfile:
-
-                writer = csv.writer(csvfile)
-
-                writer.writerow([
-                    "Company",
-                    "Role",
-                    "Section",
-                    "Topic",
-                    "Difficulty",
-                    "Question",
-                    "Option A",
-                    "Option B",
-                    "Option C",
-                    "Option D",
-                    "Answer",
-                    "Explanation"
-                ])
+        self.headers = [
+            "Company",
+            "Role",
+            "Section",
+            "Topic",
+            "Difficulty",
+            "Question",
+            "Option A",
+            "Option B",
+            "Option C",
+            "Option D",
+            "Answer",
+            "Explanation"
+        ]
 
     def save(self, question):
 
+        section = question["section"].lower()
+
+        if "quantitative" in section:
+            filename = "quantitative.csv"
+
+        elif "logical" in section:
+            filename = "logical.csv"
+
+        elif "verbal" in section:
+            filename = "verbal.csv"
+
+        else:
+            filename = "others.csv"
+
+        file = os.path.join(
+            self.output_root,
+            filename
+        )
+
+        file_exists = os.path.exists(file)
+
         with open(
-            self.file,
+            file,
             "a",
             newline="",
             encoding="utf-8"
         ) as csvfile:
 
             writer = csv.writer(csvfile)
+
+            if not file_exists:
+                writer.writerow(self.headers)
 
             writer.writerow([
                 question["company"],
@@ -67,4 +78,4 @@ class Exporter:
                 question["explanation"]
             ])
 
-        print("✅ Question Saved")
+        print(f"✅ Question Saved -> {filename}")

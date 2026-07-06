@@ -5,7 +5,7 @@ class PromptBuilder:
         self.profile = profile
         self.pattern = pattern
 
-    def build_prompt(self, topic, difficulty):
+    def build_prompt(self, section, topic, difficulty):
 
         company = self.profile["company"]
         role = self.profile["role"]
@@ -20,7 +20,27 @@ class PromptBuilder:
             [f"- {rule}" for rule in self.pattern["rules"]]
         )
 
-        diff = self.pattern["difficulty"][difficulty]
+        # -----------------------------
+        # Difficulty Mapping
+        # -----------------------------
+        difficulty_key = difficulty
+
+        if difficulty not in self.pattern["difficulty"]:
+
+            mapping = {
+                "Easy-Medium": "Medium",
+                "Medium-Hard": "Hard",
+                "Easy-Hard": "Hard",
+                "Very Easy": "Easy",
+                "Very Hard": "Hard"
+            }
+
+            difficulty_key = mapping.get(
+                difficulty,
+                "Medium"
+            )
+
+        diff = self.pattern["difficulty"][difficulty_key]
 
         steps = diff["steps"]
         time = diff["time"]
@@ -28,16 +48,17 @@ class PromptBuilder:
         prompt = f"""
 You are a Senior Assessment Architect working for {company}.
 
-Design ONE ORIGINAL aptitude question exactly as it would appear in a real {company} Online Assessment.
+Design ONE ORIGINAL {section} question exactly as it would appear in a real {company} Online Assessment.
 
 ==================================================
 COMPANY DETAILS
 ==================================================
 
 Company : {company}
+
 Role : {role}
 
-Section : Aptitude
+Section : {section}
 
 Topic : {topic}
 
@@ -74,18 +95,13 @@ QUALITY REQUIREMENTS
 Before returning the question verify internally:
 
 1. Mathematics is 100% correct.
-
 2. Answer is correct.
-
 3. Explanation exactly matches the answer.
-
 4. Topic is {topic}.
-
-5. Difficulty is {difficulty}.
-
-6. JSON is valid.
-
-7. Question is completely original.
+5. Section is {section}.
+6. Difficulty is {difficulty}.
+7. JSON is valid.
+8. Question is completely original.
 
 If any verification fails,
 discard the question and generate another one.
@@ -105,7 +121,7 @@ Return EXACTLY:
 {{
     "company":"{company}",
     "role":"{role}",
-    "section":"Aptitude",
+    "section":"{section}",
     "topic":"{topic}",
     "difficulty":"{difficulty}",
     "question":"",
