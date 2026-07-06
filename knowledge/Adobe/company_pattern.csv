@@ -1,0 +1,22 @@
+Section,Topic,Difficulty,ExpectedQuestions,WeightagePercentage,AverageTime,Priority,Round
+Aptitude,Number Theory,Medium,2,15,120,High,OA
+Aptitude,Algebra,Medium,2,15,105,High,OA
+Aptitude,Percentages,Medium,2,12,100,High,OA
+Aptitude,Speed & Distance,Medium,1,8,90,Medium,OA
+Aptitude,Probability,Hard,1,10,120,Medium,OA
+Logical Reasoning,Arrangement and sequencing,Medium,2,15,120,High,OA
+Logical Reasoning,Pattern Recognition,Medium,2,12,100,High,OA
+Logical Reasoning,Data Interpretation,Medium,1,10,120,Medium,OA
+Logical Reasoning,Analytical Reasoning,Hard,1,10,130,Medium,OA
+Verbal Ability,Reading Comprehension,Medium,2,12,240,High,OA
+Verbal Ability,Vocabulary,Medium,2,10,90,High,OA
+Verbal Ability,Grammar,Medium,1,8,100,Medium,OA
+Coding,Arrays and strings,Medium,1,15,110,High,OA
+Coding,Sorting and searching,Medium,1,15,120,High,OA
+Coding,Dynamic programming,Hard,1,18,150,High,OA
+Coding,Linked lists and pointer logic,Medium,0,0,0,Low,Interview
+Coding,Trees and binary search trees,Hard,0,0,0,Low,Interview
+Coding,Graph traversal and shortest path,Hard,0,0,0,Low,Interview
+Interview Questions,System Design Fundamentals,Hard,0,0,0,Medium,Interview
+Interview Questions,Behavioral fit with Leadership Principles,Medium,0,0,0,High,Interview
+Interview Questions,Coding discussion and optimization,Hard,0,0,0,High,Interview

@@ -1,0 +1,34 @@
+{
+  "company": "Amazon",
+  "role": "Software Development Engineer (SDE)",
+  "industry": "Technology",
+  "hiring_process": "Online Assessment → Technical Screening → Onsite Interview Loop → Offer",
+  "online_assessment_duration": "90-120 minutes",
+  "number_of_oa_rounds": 1,
+  "interview_rounds": 4,
+  "coding_questions_count": 3,
+  "aptitude_questions_count": 8,
+  "logical_questions_count": 6,
+  "verbal_questions_count": 3,
+  "overall_difficulty": "Medium-High",
+  "expected_hiring_level": "Entry level / L4",
+  "primary_programming_languages": ["Java", "Python", "C++"],
+  "preferred_skills": [
+    "Algorithms",
+    "Data Structures",
+    "Problem Solving",
+    "System Design Fundamentals",
+    "Object-Oriented Programming",
+    "Coding Efficiency",
+    "Software Engineering Best Practices"
+  ],
+  "evaluation_criteria": [
+    "Correctness",
+    "Time and Space Complexity",
+    "Code Readability",
+    "Design Clarity",
+    "Scalability",
+    "Debugging Approach",
+    "Alignment with Leadership Principles"
+  ]
+}

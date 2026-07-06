@@ -1,0 +1,24 @@
+{
+    "company": "Capgemini",
+    "role": "Analyst / Software Engineer",
+    "industry": "IT Services & Consulting",
+    "hiring_process": [
+        "Technical Assessment",
+        "Game Based Assessment",
+        "Behavioral Assessment",
+        "Technical Interview",
+        "HR Interview"
+    ],
+    "overall_difficulty": "Easy-Medium",
+    "oa_duration": "120 Minutes",
+    "coding_questions": 2,
+    "aptitude_questions": 20,
+    "logical_questions": 20,
+    "verbal_questions": 20,
+    "languages": [
+        "Java",
+        "Python",
+        "C",
+        "C++"
+    ]
+}

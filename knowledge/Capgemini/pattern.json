@@ -1,0 +1,30 @@
+{
+    "question_style": "Concept Based",
+    "language": "Professional English",
+    "real_world_context": false,
+    "multi_step_reasoning": false,
+    "calculator_allowed": true,
+    "difficulty": {
+        "Easy": {
+            "steps": 1,
+            "time": "1 minute"
+        },
+        "Medium": {
+            "steps": 2,
+            "time": "2 minutes"
+        },
+        "Hard": {
+            "steps": 3,
+            "time": "3 minutes"
+        }
+    },
+    "rules": [
+        "Generate only original questions.",
+        "Keep language simple.",
+        "Focus on logical thinking.",
+        "Exactly one correct answer.",
+        "Professional English.",
+        "Explanation must match the answer.",
+        "Suitable for Capgemini Technical Assessment."
+    ]
+}

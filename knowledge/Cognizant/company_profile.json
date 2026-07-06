@@ -1,0 +1,22 @@
+{
+    "company": "Cognizant",
+    "role": "Programmer Analyst",
+    "industry": "IT Services",
+    "hiring_process": [
+        "Online Assessment",
+        "Technical Interview",
+        "HR Interview"
+    ],
+    "overall_difficulty": "Easy-Medium",
+    "oa_duration": "120 Minutes",
+    "coding_questions": 2,
+    "aptitude_questions": 18,
+    "logical_questions": 18,
+    "verbal_questions": 20,
+    "languages": [
+        "Java",
+        "Python",
+        "C",
+        "C++"
+    ]
+}

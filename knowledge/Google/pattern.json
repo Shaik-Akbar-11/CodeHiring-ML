@@ -1,0 +1,28 @@
+{
+    "question_style": "Analytical",
+    "language": "Professional English",
+    "real_world_context": false,
+    "multi_step_reasoning": true,
+    "calculator_allowed": false,
+    "difficulty": {
+        "Easy": {
+            "steps": 2,
+            "time": "2 minutes"
+        },
+        "Medium": {
+            "steps": 4,
+            "time": "3 minutes"
+        },
+        "Hard": {
+            "steps": 6,
+            "time": "6 minutes"
+        }
+    },
+    "rules": [
+        "Original questions only",
+        "Focus on algorithms",
+        "Optimization is important",
+        "Reasoning before calculation",
+        "Professional English"
+    ]
+}

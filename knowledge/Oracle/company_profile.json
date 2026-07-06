@@ -1,0 +1,24 @@
+{
+    "company": "Oracle",
+    "role": "Software Developer",
+    "industry": "Enterprise Software",
+    "hiring_process": [
+        "Online Assessment",
+        "Technical Interview 1",
+        "Technical Interview 2",
+        "Managerial Interview",
+        "HR Interview"
+    ],
+    "overall_difficulty": "Medium",
+    "oa_duration": "90 Minutes",
+    "coding_questions": 2,
+    "aptitude_questions": 10,
+    "logical_questions": 6,
+    "verbal_questions": 4,
+    "languages": [
+        "Java",
+        "SQL",
+        "Python",
+        "C++"
+    ]
+}

@@ -1,0 +1,30 @@
+{
+    "question_style": "Concept Based",
+    "language": "Professional English",
+    "real_world_context": true,
+    "multi_step_reasoning": true,
+    "calculator_allowed": false,
+    "difficulty": {
+        "Easy": {
+            "steps": 1,
+            "time": "1 minute"
+        },
+        "Medium": {
+            "steps": 3,
+            "time": "3 minutes"
+        },
+        "Hard": {
+            "steps": 5,
+            "time": "5 minutes"
+        }
+    },
+    "rules": [
+        "Generate only original questions.",
+        "Focus on Java, SQL and enterprise software concepts.",
+        "Avoid copied internet questions.",
+        "Only one correct answer.",
+        "Mathematics must be correct.",
+        "Explanation must match the answer.",
+        "Professional English."
+    ]
+}

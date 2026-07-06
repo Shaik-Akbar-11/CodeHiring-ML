@@ -1,0 +1,30 @@
+{
+    "question_style": "Concept Based",
+    "language": "Professional English",
+    "real_world_context": false,
+    "multi_step_reasoning": true,
+    "calculator_allowed": true,
+    "difficulty": {
+        "Easy": {
+            "steps": 1,
+            "time": "1 minute"
+        },
+        "Medium": {
+            "steps": 2,
+            "time": "2 minutes"
+        },
+        "Hard": {
+            "steps": 4,
+            "time": "4 minutes"
+        }
+    },
+    "rules": [
+        "Generate original questions only.",
+        "Focus on logical thinking.",
+        "Avoid copied internet questions.",
+        "Use clean professional English.",
+        "Exactly one correct answer.",
+        "Explanation must match the answer.",
+        "Suitable for Infosys Online Assessment."
+    ]
+}

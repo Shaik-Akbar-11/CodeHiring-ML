@@ -1,0 +1,24 @@
+{
+    "company": "Microsoft",
+    "role": "Software Engineer",
+    "industry": "Technology",
+    "hiring_process": [
+        "Online Assessment",
+        "Technical Interview 1",
+        "Technical Interview 2",
+        "Hiring Manager Interview",
+        "Offer"
+    ],
+    "overall_difficulty": "Medium-High",
+    "oa_duration": "90 Minutes",
+    "coding_questions": 2,
+    "aptitude_questions": 10,
+    "logical_questions": 8,
+    "verbal_questions": 5,
+    "languages": [
+        "Java",
+        "C++",
+        "Python",
+        "C#"
+    ]
+}

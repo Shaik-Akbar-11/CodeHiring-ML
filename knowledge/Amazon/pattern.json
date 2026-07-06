@@ -1,0 +1,32 @@
+{
+    "question_style": "Scenario Based",
+    "language": "Professional English",
+    "real_world_context": true,
+    "multi_step_reasoning": true,
+    "calculator_allowed": false,
+    "minimum_options": 4,
+    "maximum_options": 4,
+    "answer_type": "Single Correct",
+    "difficulty": {
+        "Easy": {
+            "steps": 1,
+            "time": "1 minute"
+        },
+        "Medium": {
+            "steps": 2,
+            "time": "2 minutes"
+        },
+        "Hard": {
+            "steps": 4,
+            "time": "5 minutes"
+        }
+    },
+    "rules": [
+        "Never copy questions from the internet.",
+        "Generate an original question.",
+        "Mathematics must be correct.",
+        "Explanation must match the answer.",
+        "Only one option should be correct.",
+        "Question should resemble a real Amazon Online Assessment."
+    ]
+}

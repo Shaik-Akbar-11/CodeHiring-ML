@@ -1,0 +1,30 @@
+{
+    "question_style": "Direct Formula Based",
+    "language": "Simple Professional English",
+    "real_world_context": false,
+    "multi_step_reasoning": false,
+    "calculator_allowed": true,
+    "difficulty": {
+        "Easy": {
+            "steps": 1,
+            "time": "45 seconds"
+        },
+        "Medium": {
+            "steps": 2,
+            "time": "90 seconds"
+        },
+        "Hard": {
+            "steps": 3,
+            "time": "2 minutes"
+        }
+    },
+    "rules": [
+        "Generate original questions only.",
+        "Keep questions short and direct.",
+        "Avoid unnecessary stories.",
+        "Use simple calculations.",
+        "Exactly one correct answer.",
+        "Professional English.",
+        "Suitable for TCS NQT."
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "company": "Google",
+    "role": "Software Engineer",
+    "industry": "Technology",
+    "hiring_process": [
+        "Online Assessment",
+        "Technical Interview 1",
+        "Technical Interview 2",
+        "Googliness Interview",
+        "Hiring Committee"
+    ],
+    "difficulty": "Very High",
+    "languages": [
+        "Java",
+        "Python",
+        "C++",
+        "Go"
+    ]
+}

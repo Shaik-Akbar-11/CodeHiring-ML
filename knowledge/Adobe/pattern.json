@@ -1,0 +1,29 @@
+{
+    "question_style": "Practical Problem Solving",
+    "language": "Professional English",
+    "real_world_context": true,
+    "multi_step_reasoning": true,
+    "calculator_allowed": false,
+    "difficulty": {
+        "Easy": {
+            "steps": 2,
+            "time": "2 minutes"
+        },
+        "Medium": {
+            "steps": 3,
+            "time": "3 minutes"
+        },
+        "Hard": {
+            "steps": 5,
+            "time": "5 minutes"
+        }
+    },
+    "rules": [
+        "Generate original questions only.",
+        "Focus on practical software engineering.",
+        "Prefer logical reasoning over lengthy calculations.",
+        "Only one correct answer.",
+        "Explanation must be correct.",
+        "Professional English."
+    ]
+}

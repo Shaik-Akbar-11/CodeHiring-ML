@@ -1,0 +1,22 @@
+{
+    "company": "Infosys",
+    "role": "System Engineer",
+    "industry": "IT Services",
+    "hiring_process": [
+        "Online Assessment",
+        "Technical Interview",
+        "HR Interview"
+    ],
+    "overall_difficulty": "Easy-Medium",
+    "oa_duration": "120 Minutes",
+    "coding_questions": 3,
+    "aptitude_questions": 15,
+    "logical_questions": 15,
+    "verbal_questions": 20,
+    "languages": [
+        "Java",
+        "Python",
+        "C",
+        "C++"
+    ]
+}

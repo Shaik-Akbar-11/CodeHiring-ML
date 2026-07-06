@@ -1,0 +1,25 @@
+{
+    "company": "Accenture",
+    "role": "Associate Software Engineer",
+    "industry": "IT Services & Consulting",
+    "hiring_process": [
+        "Cognitive Assessment",
+        "Technical Assessment",
+        "Coding Assessment",
+        "Communication Assessment",
+        "Technical Interview",
+        "HR Interview"
+    ],
+    "overall_difficulty": "Easy-Medium",
+    "oa_duration": "150 Minutes",
+    "coding_questions": 2,
+    "aptitude_questions": 20,
+    "logical_questions": 20,
+    "verbal_questions": 20,
+    "languages": [
+        "Java",
+        "Python",
+        "C",
+        "C++"
+    ]
+}
