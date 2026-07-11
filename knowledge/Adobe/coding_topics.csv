@@ -1,9 +1,21 @@
-Topic,SubTopic,Difficulty,Frequency,ImportanceWeight,ExpectedQuestionCount,AverageTime,PrerequisiteConcepts,LearningOrder,ProgrammingLanguage
-Data Structures,Arrays and strings,Medium,High,9,1,110,array manipulation; string processing,1,Java/Python/C++
-Algorithms,Sorting and searching,Medium,High,8,1,120,algorithm fundamentals; complexity analysis,2,Java/Python/C++
-Algorithms,Dynamic programming,Hard,High,9,1,150,recursion; memoization; state definition,3,Java/Python/C++
-Data Structures,Linked lists and pointer logic,Medium,Medium,7,1,120,node manipulation; list traversal,4,Java/Python/C++
-Algorithms,Greedy algorithms,Medium,Medium,7,1,120,optimal substructure; heuristic design,5,Java/Python/C++
-Data Structures,Trees and binary search trees,Hard,Medium,8,1,140,tree traversal; recursion,6,Java/Python/C++
-Algorithms,Graph traversal and shortest path,Hard,Medium,8,1,150,breadth-first search; depth-first search,7,Java/Python/C++
-Software Design,Object-oriented design and modular coding,Medium,Low,7,1,130,class design; data encapsulation,8,Java/Python/C++
+topic,priority,difficulty,weight
+Arrays,Very High,Medium,10
+Strings,Very High,Medium,10
+Hash Maps,High,Medium,9
+Linked List,High,Medium,9
+Stack,High,Medium,8
+Queue,High,Medium,8
+Trees,Very High,Medium-Hard,10
+Binary Search Trees,High,Medium-Hard,9
+Graphs,High,Medium-Hard,9
+Heap,Medium,Medium,7
+Binary Search,High,Medium,9
+Sliding Window,High,Medium,8
+Two Pointers,High,Medium,8
+Recursion,High,Medium,8
+Backtracking,Medium,Hard,7
+Dynamic Programming,High,Hard,9
+Greedy Algorithms,Medium,Medium-Hard,7
+Bit Manipulation,Medium,Medium,6
+Object Oriented Programming,Very High,Medium,10
+SQL,High,Medium,8

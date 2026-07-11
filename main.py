@@ -1,4 +1,5 @@
 import json
+import pandas as pd
 
 from engine.company_loader import CompanyLoader
 from engine.prompt_builder import PromptBuilder
@@ -8,7 +9,36 @@ from engine.exporter import Exporter
 
 
 MAX_ATTEMPTS = 5
-QUESTIONS_PER_TOPIC = 3
+QUESTIONS_PER_TOPIC = 1
+
+
+def get_existing_count(exporter, section_name, topic):
+
+    section = section_name.lower()
+
+    if "quantitative" in section:
+        filename = "quantitative.csv"
+
+    elif "logical" in section:
+        filename = "logical.csv"
+
+    elif "verbal" in section:
+        filename = "verbal.csv"
+
+    else:
+        return 0
+
+    file = f"{exporter.output_root}/{filename}"
+
+    try:
+        df = pd.read_csv(file)
+
+        return len(
+            df[df["Topic"] == topic]
+        )
+
+    except:
+        return 0
 
 
 def generate_section(
@@ -36,16 +66,36 @@ def generate_section(
         print(f"DIFFICULTY : {difficulty}")
         print("-" * 80)
 
-        saved = 0
+        saved = get_existing_count(
+            exporter,
+            section_name,
+            topic
+        )
+
+        if saved >= QUESTIONS_PER_TOPIC:
+
+            print(
+                f"✅ {topic} already has "
+                f"{saved} questions. Skipping..."
+            )
+
+            total_saved += saved
+            continue
 
         while saved < QUESTIONS_PER_TOPIC:
 
-            print(f"\nGenerating Question {saved + 1}/{QUESTIONS_PER_TOPIC}")
+            print(
+                f"\nGenerating Question "
+                f"{saved + 1}/{QUESTIONS_PER_TOPIC}"
+            )
 
             accepted = False
             attempt = 1
 
-            while not accepted and attempt <= MAX_ATTEMPTS:
+            while (
+                not accepted and
+                attempt <= MAX_ATTEMPTS
+            ):
 
                 print(f"Attempt : {attempt}")
 
@@ -65,7 +115,9 @@ def generate_section(
                         .strip()
                     )
 
-                    question = json.loads(clean_response)
+                    question = json.loads(
+                        clean_response
+                    )
 
                 except Exception as e:
 
@@ -75,9 +127,13 @@ def generate_section(
                     attempt += 1
                     continue
 
-                valid, errors = validator.validate(question)
+                valid, errors = (
+                    validator.validate(question)
+                )
 
-                print("\n========== VALIDATION ==========")
+                print(
+                    "\n========== VALIDATION =========="
+                )
 
                 if valid:
                     print("✅ Validation Passed")
@@ -94,7 +150,10 @@ def generate_section(
                     saved += 1
                     total_saved += 1
 
-                    print(f"✅ Saved ({saved}/{QUESTIONS_PER_TOPIC})")
+                    print(
+                        f"✅ Saved "
+                        f"({saved}/{QUESTIONS_PER_TOPIC})"
+                    )
 
                 else:
 
@@ -104,19 +163,29 @@ def generate_section(
 
             if not accepted:
 
-                print(f"⚠ Skipping {topic}")
+                print(
+                    f"⚠ Skipping {topic}"
+                )
+                break
 
     return total_saved
 
 
 def main():
 
-    print("\n========== CODEHIRING AI DATASET ENGINE ==========\n")
+    print(
+        "\n========== CODEHIRING AI DATASET ENGINE ==========\n"
+    )
 
-    loader = CompanyLoader("knowledge/Amazon")
+    loader = CompanyLoader(
+        "knowledge/Amazon"
+    )
+
     data = loader.load_all()
 
-    print("✅ Company Loaded Successfully\n")
+    print(
+        "✅ Company Loaded Successfully\n"
+    )
 
     builder = PromptBuilder(
         data["profile"],
