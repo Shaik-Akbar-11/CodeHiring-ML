@@ -11,6 +11,9 @@ from engine.exporter import Exporter
 MAX_ATTEMPTS = 5
 QUESTIONS_PER_TOPIC = 1
 
+# Change only this line
+COMPANY = "Google"
+
 
 def get_existing_count(exporter, section_name, topic):
 
@@ -156,16 +159,12 @@ def generate_section(
                     )
 
                 else:
-
                     print("❌ Rejected")
 
                 attempt += 1
 
             if not accepted:
-
-                print(
-                    f"⚠ Skipping {topic}"
-                )
+                print(f"⚠ Skipping {topic}")
                 break
 
     return total_saved
@@ -177,8 +176,10 @@ def main():
         "\n========== CODEHIRING AI DATASET ENGINE ==========\n"
     )
 
+    print(f"COMPANY : {COMPANY}\n")
+
     loader = CompanyLoader(
-        "knowledge/Amazon"
+        f"knowledge/{COMPANY}"
     )
 
     data = loader.load_all()
@@ -194,7 +195,7 @@ def main():
 
     generator = Generator()
     validator = Validator()
-    exporter = Exporter()
+    exporter = Exporter(COMPANY)
 
     grand_total = 0
 
@@ -227,9 +228,10 @@ def main():
 
     print("\n========================================")
     print("DATASET GENERATION COMPLETED")
+    print(f"COMPANY : {COMPANY}")
     print(f"TOTAL QUESTIONS : {grand_total}")
     print("========================================")
 
 
 if __name__ == "__main__":
-    main()
+    main()  

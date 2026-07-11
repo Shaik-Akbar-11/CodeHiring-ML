@@ -1,5 +1,12 @@
-Analytical Reasoning
-Logical Puzzles
-Pattern Recognition
-Data Sufficiency
-Critical Thinking
+topic,priority,difficulty,weight
+Logical Puzzles,Very High,Medium-Hard,10
+Data Sufficiency,Very High,Medium-Hard,10
+Analytical Reasoning,High,Medium-Hard,9
+Seating Arrangement,High,Medium,9
+Logical Sequence,High,Medium,8
+Statement and Conclusion,High,Medium,8
+Coding Decoding,Medium,Medium,7
+Blood Relations,Medium,Easy-Medium,6
+Direction Sense,Medium,Easy-Medium,6
+Syllogisms,Medium,Medium,6
+Input Output,Medium,Medium,6

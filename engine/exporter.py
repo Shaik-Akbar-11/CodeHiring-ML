@@ -4,9 +4,9 @@ import os
 
 class Exporter:
 
-    def __init__(self):
+    def __init__(self, company):
 
-        self.output_root = "output/Amazon"
+        self.output_root = f"output/{company}"
 
         os.makedirs(
             self.output_root,

@@ -1,5 +1,11 @@
-Reading Comprehension
-Critical Reading
-Vocabulary
-Sentence Completion
-Grammar
+topic,priority,difficulty,weight
+Reading Comprehension,Very High,Medium-Hard,10
+Vocabulary,High,Medium,9
+Grammar,High,Medium,9
+Sentence Correction,High,Medium,8
+Error Spotting,High,Medium,8
+Fill in the Blanks,Medium,Easy-Medium,7
+Para Jumbles,Medium,Medium,7
+Sentence Completion,Medium,Medium,6
+Synonyms and Antonyms,Medium,Easy-Medium,6
+Verbal Analogies,Medium,Medium,6
