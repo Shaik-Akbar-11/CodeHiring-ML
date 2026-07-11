@@ -12,7 +12,7 @@ MAX_ATTEMPTS = 5
 QUESTIONS_PER_TOPIC = 1
 
 # Change only this line
-COMPANY = "Google"
+COMPANY = "Microsoft"
 
 
 def get_existing_count(exporter, section_name, topic):
