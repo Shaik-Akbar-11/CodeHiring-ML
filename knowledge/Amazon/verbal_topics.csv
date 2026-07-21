@@ -2,8 +2,13 @@ topic,priority,difficulty,weight
 Reading Comprehension,Very High,Medium,10
 Vocabulary,High,Medium,9
 Grammar,High,Medium,8
-Sentence Correction,Medium,Medium,7
+Sentence Correction,High,Medium,8
 Error Spotting,Medium,Medium,7
 Fill in the Blanks,Medium,Easy-Medium,6
 Para Jumbles,Medium,Medium,6
-Sentence Completion,Low,Medium,5
+Sentence Completion,Medium,Medium,6
+Synonyms & Antonyms,Medium,Easy-Medium,5
+Word Usage in Context,Medium,Medium,5
+Reading Inference,Medium,Medium-Hard,5
+Critical Reasoning,Low,Medium-Hard,4
+Verbal Analogies,Low,Easy-Medium,3

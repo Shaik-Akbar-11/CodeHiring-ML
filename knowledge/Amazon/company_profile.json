@@ -1,34 +1,65 @@
 {
   "company": "Amazon",
-  "role": "Software Development Engineer (SDE)",
+  "short_name": "Amazon",
+
   "industry": "Technology",
-  "hiring_process": "Online Assessment → Technical Screening → Onsite Interview Loop → Offer",
-  "online_assessment_duration": "90-120 minutes",
-  "number_of_oa_rounds": 1,
-  "interview_rounds": 4,
-  "coding_questions_count": 3,
-  "aptitude_questions_count": 8,
-  "logical_questions_count": 6,
-  "verbal_questions_count": 3,
-  "overall_difficulty": "Medium-High",
-  "expected_hiring_level": "Entry level / L4",
-  "primary_programming_languages": ["Java", "Python", "C++"],
-  "preferred_skills": [
-    "Algorithms",
-    "Data Structures",
-    "Problem Solving",
-    "System Design Fundamentals",
-    "Object-Oriented Programming",
-    "Coding Efficiency",
-    "Software Engineering Best Practices"
+  "company_type": "Product-Based",
+
+  "headquarters": "Seattle, Washington, USA",
+
+  "official_website": "https://www.amazon.jobs",
+
+  "primary_hiring_roles": [
+    "Software Development Engineer I",
+    "Software Development Engineer II",
+    "Data Engineer",
+    "Business Intelligence Engineer",
+    "Machine Learning Engineer",
+    "Cloud Support Associate",
+    "Quality Assurance Engineer"
   ],
-  "evaluation_criteria": [
-    "Correctness",
-    "Time and Space Complexity",
-    "Code Readability",
-    "Design Clarity",
-    "Scalability",
-    "Debugging Approach",
-    "Alignment with Leadership Principles"
-  ]
+
+  "target_candidate_level": [
+    "Intern",
+    "Graduate",
+    "Entry Level",
+    "Experienced"
+  ],
+
+  "primary_programming_languages": [
+    "Java",
+    "Python",
+    "C++"
+  ],
+
+  "core_skills": [
+    "Data Structures",
+    "Algorithms",
+    "Problem Solving",
+    "Object Oriented Programming",
+    "Database Management Systems",
+    "Operating Systems",
+    "Computer Networks",
+    "SQL",
+    "Software Engineering"
+  ],
+
+  "behavioral_focus": [
+    "Leadership Principles",
+    "Ownership",
+    "Customer Obsession",
+    "Bias for Action",
+    "Invent and Simplify",
+    "Deliver Results"
+  ],
+
+  "coding_platform": "Amazon Online Assessment Platform",
+
+  "hiring_model": "Online Assessment → Technical Interviews → Hiring Manager Interview → HR Discussion",
+
+  "overall_difficulty": "Medium-Hard",
+
+  "last_updated": "2026",
+
+  "version": "1.0"
 }

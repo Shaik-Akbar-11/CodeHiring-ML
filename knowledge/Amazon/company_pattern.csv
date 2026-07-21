@@ -1,22 +1,42 @@
 Section,Topic,Difficulty,ExpectedQuestions,WeightagePercentage,AverageTime,Priority,Round
-Aptitude,Number Theory,Medium,2,15,120,High,OA
-Aptitude,Algebra,Medium,2,15,105,High,OA
+Aptitude,Data Interpretation,Medium-Hard,3,18,150,Very High,OA
+Aptitude,Probability,Medium-Hard,2,15,120,Very High,OA
 Aptitude,Percentages,Medium,2,12,100,High,OA
-Aptitude,Speed & Distance,Medium,1,8,90,Medium,OA
-Aptitude,Probability,Hard,1,10,120,Medium,OA
-Logical Reasoning,Arrangement and sequencing,Medium,2,15,120,High,OA
-Logical Reasoning,Pattern Recognition,Medium,2,12,100,High,OA
-Logical Reasoning,Data Interpretation,Medium,1,10,120,Medium,OA
-Logical Reasoning,Analytical Reasoning,Hard,1,10,130,Medium,OA
-Verbal Ability,Reading Comprehension,Medium,2,12,240,High,OA
+Aptitude,Ratio and Proportion,Medium,2,10,100,High,OA
+Aptitude,Time and Work,Medium,1,8,90,Medium,OA
+Aptitude,Profit and Loss,Medium,1,7,90,Medium,OA
+Aptitude,Arithmetic Word Problems,Medium,2,10,120,High,OA
+Aptitude,Number System,Medium,1,5,90,Medium,OA
+Aptitude,Algebra,Medium,1,5,90,Medium,OA
+
+Logical Reasoning,Logical Puzzles,Medium-Hard,2,18,150,Very High,OA
+Logical Reasoning,Data Sufficiency,Medium-Hard,2,15,120,Very High,OA
+Logical Reasoning,Analytical Reasoning,Medium-Hard,2,15,120,High,OA
+Logical Reasoning,Seating Arrangement,Medium,2,12,120,High,OA
+Logical Reasoning,Coding Decoding,Medium,1,8,90,Medium,OA
+Logical Reasoning,Blood Relations,Easy-Medium,1,5,60,Low,OA
+
+Verbal Ability,Reading Comprehension,Medium,2,15,240,Very High,OA
+Verbal Ability,Sentence Correction,Medium,2,12,120,High,OA
 Verbal Ability,Vocabulary,Medium,2,10,90,High,OA
-Verbal Ability,Grammar,Medium,1,8,100,Medium,OA
-Coding,Arrays and strings,Medium,1,15,110,High,OA
-Coding,Sorting and searching,Medium,1,15,120,High,OA
-Coding,Dynamic programming,Hard,1,18,150,High,OA
-Coding,Linked lists and pointer logic,Medium,0,0,0,Low,Interview
-Coding,Trees and binary search trees,Hard,0,0,0,Low,Interview
-Coding,Graph traversal and shortest path,Hard,0,0,0,Low,Interview
-Interview Questions,System Design Fundamentals,Hard,0,0,0,Medium,Interview
-Interview Questions,Behavioral fit with Leadership Principles,Medium,0,0,0,High,Interview
-Interview Questions,Coding discussion and optimization,Hard,0,0,0,High,Interview
+Verbal Ability,Grammar,Medium,1,8,90,Medium,OA
+Verbal Ability,Para Jumbles,Medium,1,5,90,Medium,OA
+
+Coding,Arrays,Medium,1,12,120,Very High,OA
+Coding,Strings,Medium,1,12,120,Very High,OA
+Coding,Hash Maps,Medium,1,10,120,Very High,OA
+Coding,Sliding Window,Medium-Hard,1,10,150,Very High,OA
+Coding,Trees,Medium-Hard,1,10,150,Very High,OA
+Coding,Graphs,Hard,1,10,180,High,OA
+Coding,Binary Search,Medium,1,8,120,High,OA
+Coding,Dynamic Programming,Hard,1,8,180,High,OA
+
+Interview,Leadership Principles,Medium,0,0,0,Very High,Interview
+Interview,Behavioral STAR Questions,Medium,0,0,0,Very High,Interview
+Interview,Operating Systems,Medium-Hard,0,0,0,High,Interview
+Interview,DBMS,Medium,0,0,0,High,Interview
+Interview,Object Oriented Programming,Medium,0,0,0,High,Interview
+Interview,Computer Networks,Medium,0,0,0,Medium,Interview
+Interview,System Design,Hard,0,0,0,Medium,Interview
+Interview,Project Deep Dive,Medium,0,0,0,Very High,Interview
+Interview,Coding Optimization Discussion,Hard,0,0,0,High,Interview

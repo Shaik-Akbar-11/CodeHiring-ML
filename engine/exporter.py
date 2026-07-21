@@ -28,31 +28,40 @@ class Exporter:
             "Explanation"
         ]
 
-    def save(self, question):
+    def get_filename(self, section):
 
-        section = question["section"].lower()
+        section = section.lower()
 
         if "quantitative" in section:
-            filename = "quantitative.csv"
+            return "quantitative.csv"
 
         elif "logical" in section:
-            filename = "logical.csv"
+            return "logical.csv"
 
         elif "verbal" in section:
-            filename = "verbal.csv"
+            return "verbal.csv"
+
+        elif "coding" in section:
+            return "coding.csv"
 
         else:
-            filename = "others.csv"
+            return "others.csv"
 
-        file = os.path.join(
+    def save(self, question):
+
+        filename = self.get_filename(
+            question.get("section", "")
+        )
+
+        filepath = os.path.join(
             self.output_root,
             filename
         )
 
-        file_exists = os.path.exists(file)
+        file_exists = os.path.exists(filepath)
 
         with open(
-            file,
+            filepath,
             "a",
             newline="",
             encoding="utf-8"
@@ -63,19 +72,21 @@ class Exporter:
             if not file_exists:
                 writer.writerow(self.headers)
 
+            options = question.get("options", {})
+
             writer.writerow([
-                question["company"],
-                question["role"],
-                question["section"],
-                question["topic"],
-                question["difficulty"],
-                question["question"],
-                question["options"]["A"],
-                question["options"]["B"],
-                question["options"]["C"],
-                question["options"]["D"],
-                question["answer"],
-                question["explanation"]
+                question.get("company", ""),
+                question.get("role", ""),
+                question.get("section", ""),
+                question.get("topic", ""),
+                question.get("difficulty", ""),
+                question.get("question", ""),
+                options.get("A", ""),
+                options.get("B", ""),
+                options.get("C", ""),
+                options.get("D", ""),
+                question.get("answer", ""),
+                question.get("explanation", "")
             ])
 
         print(f"✅ Question Saved -> {filename}")

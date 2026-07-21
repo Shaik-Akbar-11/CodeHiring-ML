@@ -10,31 +10,44 @@ class Reviewer:
     def review(self, question_json: str):
 
         prompt = f"""
-Review this aptitude question.
+You are a Senior Assessment Reviewer.
 
-Check only:
+Review the following assessment question.
+
+Verify ALL of the following:
 
 1. Mathematics is correct.
 2. Correct answer is correct.
-3. Explanation matches answer.
-4. Topic matches.
-5. Difficulty matches.
-6. Question is original.
+3. Explanation matches the answer.
+4. Topic matches the question.
+5. Difficulty matches the question.
+6. Company style is realistic.
+7. Grammar is correct.
+8. Exactly one option is correct.
+9. Question is original.
+10. JSON structure is valid.
 
-Reject ONLY if any of the above fails.
+Reject the question if ANY check fails.
 
-Return ONLY JSON.
+Return ONLY ONE valid JSON object.
+
+Return exactly this format:
 
 {{
     "accepted": true,
-    "score": 95,
-    "company_match": true,
-    "difficulty_match": true,
-    "mathematics_correct": true,
-    "answer_correct": true,
-    "explanation_correct": true,
-    "original": true,
-    "errors":[]
+    "overall_score": 96,
+    "checks": {{
+        "company_match": true,
+        "topic_match": true,
+        "difficulty_match": true,
+        "mathematics_correct": true,
+        "answer_correct": true,
+        "explanation_correct": true,
+        "grammar_correct": true,
+        "single_correct_answer": true,
+        "original": true
+    }},
+    "errors": []
 }}
 
 Question:
@@ -51,19 +64,30 @@ Question:
         )
 
         try:
-            return json.loads(response)
+
+            result = json.loads(response)
+
+            if "accepted" not in result:
+                raise ValueError()
+
+            return result
 
         except Exception:
 
             return {
                 "accepted": False,
-                "score": 0,
-                "company_match": False,
-                "difficulty_match": False,
-                "mathematics_correct": False,
-                "answer_correct": False,
-                "explanation_correct": False,
-                "original": False,
+                "overall_score": 0,
+                "checks": {
+                    "company_match": False,
+                    "topic_match": False,
+                    "difficulty_match": False,
+                    "mathematics_correct": False,
+                    "answer_correct": False,
+                    "explanation_correct": False,
+                    "grammar_correct": False,
+                    "single_correct_answer": False,
+                    "original": False
+                },
                 "errors": [
                     "Reviewer returned invalid JSON."
                 ]

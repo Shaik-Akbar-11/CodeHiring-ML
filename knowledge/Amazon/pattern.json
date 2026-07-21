@@ -1,32 +1,88 @@
 {
-    "question_style": "Scenario Based",
-    "language": "Professional English",
-    "real_world_context": true,
-    "multi_step_reasoning": true,
-    "calculator_allowed": false,
+  "company": "Amazon",
+  "version": "1.0",
+
+  "question_style": "Scenario Based",
+  "language": "Professional English",
+  "real_world_context": true,
+  "multi_step_reasoning": true,
+
+  "question_format": {
     "minimum_options": 4,
     "maximum_options": 4,
     "answer_type": "Single Correct",
-    "difficulty": {
-        "Easy": {
-            "steps": 1,
-            "time": "1 minute"
-        },
-        "Medium": {
-            "steps": 2,
-            "time": "2 minutes"
-        },
-        "Hard": {
-            "steps": 4,
-            "time": "5 minutes"
-        }
+    "shuffle_options": true,
+    "negative_marking": false
+  },
+
+  "calculator_allowed": false,
+
+  "difficulty": {
+    "Easy": {
+      "steps": 1,
+      "time_minutes": 1,
+      "reasoning": "Basic",
+      "complexity": "Low"
     },
-    "rules": [
-        "Never copy questions from the internet.",
-        "Generate an original question.",
-        "Mathematics must be correct.",
-        "Explanation must match the answer.",
-        "Only one option should be correct.",
-        "Question should resemble a real Amazon Online Assessment."
-    ]
+    "Easy-Medium": {
+      "steps": 2,
+      "time_minutes": 2,
+      "reasoning": "Basic-Intermediate",
+      "complexity": "Low-Medium"
+    },
+    "Medium": {
+      "steps": 2,
+      "time_minutes": 2,
+      "reasoning": "Intermediate",
+      "complexity": "Medium"
+    },
+    "Medium-Hard": {
+      "steps": 3,
+      "time_minutes": 3,
+      "reasoning": "Advanced",
+      "complexity": "Medium-High"
+    },
+    "Hard": {
+      "steps": 4,
+      "time_minutes": 5,
+      "reasoning": "Expert",
+      "complexity": "High"
+    }
+  },
+
+  "generation_rules": [
+    "Generate an original question.",
+    "Never copy questions from public websites.",
+    "Question must match the requested topic.",
+    "Question must match the requested difficulty.",
+    "Question should resemble a real Amazon Online Assessment.",
+    "Use realistic numerical values.",
+    "Avoid ambiguous wording.",
+    "Avoid grammatical errors.",
+    "Generate exactly four options.",
+    "Only one option must be correct.",
+    "Distractors should be realistic.",
+    "Explanation must justify the correct answer."
+  ],
+
+  "validation_rules": [
+    "Mathematics must be correct.",
+    "Answer must match explanation.",
+    "Options must be unique.",
+    "Question must not be duplicated.",
+    "Difficulty should match requested level.",
+    "Topic should match requested topic.",
+    "Grammar must be correct."
+  ],
+
+  "output_format": {
+    "company": true,
+    "section": true,
+    "topic": true,
+    "difficulty": true,
+    "question": true,
+    "options": true,
+    "answer": true,
+    "explanation": true
+  }
 }
